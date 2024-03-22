@@ -1,0 +1,120 @@
+.App {
+  display: flex;
+}
+
+/* Menu bar css */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 80px; /* Default width */
+  min-height: 100vh;
+  background-color: rgb(164, 170, 127);
+  transition: width 0.5s;
+  align-items: center;
+  border-right: 1px solid black;
+  padding: 0px 10px;
+}
+.menu-container.expanded {
+  width: 200px; /* Expanded width */
+}
+.menu-btn {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  /* box-shadow: 0 10px 6px rgba(116, 66, 66, 0.1); */
+}
+.menu-icon-container{
+  display: flex;
+  justify-content: center;
+}
+.menu-icon{
+  transition: transform 0.3s ease-out;
+  height: 100%;
+}
+.selected{
+  background-color: rgb(227,233,233);
+}
+.menu-btn-animate:hover{
+  background-color: rgb(227, 233, 233);
+}
+.rotate-menu {
+  transform: rotate(0deg); /* Rotate menu icon to 0 degrees */
+}
+.rotate-close {
+  transform: rotate(180deg); /* Rotate close icon to 180 degrees */
+}
+
+
+/* Home page css */
+.content-container {
+  flex: 1;
+  background-color: rgb(203, 209, 166);
+  min-height: 100vh;
+}
+.items-container{
+  cursor: pointer;
+  overflow: hidden;
+}
+.inventory-item{
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+.inventory-item:hover{
+  background-color: rgb(227, 233, 233);
+}
+.item-info-container{
+  display: flex;
+  flex-direction: row;
+}
+.form-element{
+  margin-right: 10px;
+}
+.item-form-section {
+  align-items: center;
+}
+.top-container{
+  width: 68%;
+}
+
+@media (max-width: 700px) {
+  .item-info-container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .item-footer{
+    flex-direction: column;
+    align-items: start;
+  }
+  .item-form-section {
+    flex-direction: column;
+    align-items: start;
+  }
+  .form-element{
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 1080px) {
+  .top-container {
+    width: 100%; /* Set full width for small screens */
+  }
+}
+
+/* Settings page css */
+.settings-form-container{
+  width: 70%;
+}
+
+@media (max-width: 700px){
+  .settings-form-container{
+    width: auto;
+  }
+}
