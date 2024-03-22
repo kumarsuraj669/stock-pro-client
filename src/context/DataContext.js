@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { HOST as host } from '../env.local';
+import { HOST as host } from '../.env';
 import { useAuth } from './AuthContext';
 
 export const DataContext = createContext();
