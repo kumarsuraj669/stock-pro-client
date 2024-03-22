@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import {useAuth} from '../context/AuthContext'
+import { HOST as host} from '../env.local';
 
-const host = process.env.REACT_APP_HOST;
+// const host = process.env.REACT_APP_HOST;
 
 const Login = () => {
     
