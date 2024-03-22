@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { HOST as host } from '../.env';
+const host = process.env.REACT_APP_HOST;
 
 export const AuthContext = createContext();
 
